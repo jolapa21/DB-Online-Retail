@@ -1,13 +1,14 @@
 CREATE TABLE produk ( 
     id_produk INT PRIMARY KEY, 
     nama_produk VARCHAR(50) NOT NULL, 
-    harga_produk DECIMAL(10,2) NOT NULL, 
+    harga_produk DECIMAL(10,2) NOT NULL,
+    jumlah_jual INT(5) NOT NULL, 
     stok_produk INT NOT NULL, 
     id_kategori INT NOT NULL, 
     FOREIGN KEY (id_kategori) REFERENCES kategori(id_kategori) );
 
 CREATE TABLE kategori ( 
-    d_kategori INT PRIMARY KEY, 
+    id_kategori INT PRIMARY KEY, 
     nama_kategori VARCHAR(50) NOT NULL );
 
 CREATE TABLE pelanggan ( 
